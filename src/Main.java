@@ -1,10 +1,19 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        printFigure(21);
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Введите ширину: ");
+        int w = scan.nextInt();
+
+        printFigure(w);
     }
 
     private static void printFigure(int width){
+
+        if(width % 2 == 0)
+            return;
 
         int height = (width / 2) + 1;
         int m_width = width;
